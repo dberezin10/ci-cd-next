@@ -27,5 +27,6 @@ jobs:
             npm install
             npm run build
             rm -r ../../var/www/dist/
-            mv dist/ ../../var/www/
+            rm -r ../../var/www/.next/
+            mv .next/ ../../var/www/
             sudo service nginx restart
