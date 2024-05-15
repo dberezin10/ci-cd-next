@@ -1,0 +1,83 @@
+server {
+  server_name example.com;
+
+  set $root /var/www/nextjs/.next;
+
+  location @proxy {
+    include proxy_params;
+
+    proxy_pass http://77.223.100.33;
+  }
+
+  location / {
+    root $root;
+
+    try_files $uri $uri/ $uri/index.html @proxy;
+  }
+
+  location /_next/static {
+    alias $root/static;
+
+    expires 1y;
+
+    try_files $uri $uri/ =404;
+  }
+
+  location / {
+    proxy_pass http://localhost:3000;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+
+  listen 80;
+}
+
+
+server {
+    listen 80;
+    server_name 77.223.100.33;
+
+    root /var/www/nextjs/.next/server/pages;
+
+    location / {
+        root /var/www/nextjs/.next;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /server/pages/ {
+        alias /var/www/nextjs/.next/server/pages/;
+        autoindex on;
+    }
+
+    location @proxy {
+        include proxy_params;
+        proxy_pass http://127.0.0.1:3000;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html @proxy;
+    }
+
+}
+
+server {
+    listen 80;
+    server_name 77.223.100.33;
+
+    root /var/www/nextjs/.next/server/pages;
+
+    location / {
+        root /var/www/nextjs/.next;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /server/pages/ {
+        alias /var/www/nextjs/.next/server/pages/;
+        autoindex on;
+    }
+}
