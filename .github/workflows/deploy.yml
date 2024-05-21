@@ -1,4 +1,4 @@
-name: ci-cd-next actions
+name: Alternative actions
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
@@ -21,6 +21,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             fuser -n tcp -k 4000
+            nvm install 20.0.0
+            nvm use 20.0.0
             cd /root/ci-cd-next
             git pull
             export NVM_DIR=~/.nvm
