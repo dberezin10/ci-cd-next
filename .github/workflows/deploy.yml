@@ -1,4 +1,4 @@
-name: Alternative actions
+name: ci-cd-next actions
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
@@ -13,6 +13,20 @@ jobs:
         node-version: [ 20.x ]
 
     steps:
+      - uses: actions/checkout@v4
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Check if port 4000 is available
+        run: |
+          PORT=4000
+          if lsof -i :$PORT; then
+            echo "Port $PORT already in use, skipping npm run dev"
+            exit 0
+          else
+            echo "Port $PORT is available, proceeding with npm run dev"
+          fi
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
@@ -21,8 +35,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             fuser -n tcp -k 4000
-            nvm install 20.0.0
-            nvm use 20.0.0
             cd /root/ci-cd-next
             git pull
             export NVM_DIR=~/.nvm
