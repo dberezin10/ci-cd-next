@@ -1,5 +1,6 @@
 import Image from "next/image";
-import '../app/globals.css'
+
+import '@/app/globals.css';
 
 const Root = () => {
 
