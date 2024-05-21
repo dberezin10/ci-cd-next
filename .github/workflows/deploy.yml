@@ -20,7 +20,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            nvm install node
+            fuser -n tcp -k 4000
+            nvm install 20.0.0
+            nvm use 20.0.0
             cd /root/ci-cd-next
             git pull
             export NVM_DIR=~/.nvm

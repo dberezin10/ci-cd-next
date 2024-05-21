@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c04eff-1afb-41d7-a1cd-394199307d4a" name="Changes" comment="#11: fix pages">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+    <list default="true" id="64c04eff-1afb-41d7-a1cd-394199307d4a" name="Changes" comment="#14: delete scss">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715775239699</updated>
       <workItem from="1715775240898" duration="9639000" />
-      <workItem from="1716275388291" duration="4809000" />
+      <workItem from="1716275388291" duration="5505000" />
     </task>
     <task id="LOCAL-00001" summary="#1: initial">
       <option name="closed" value="true" />
@@ -153,7 +150,31 @@
       <option name="project" value="LOCAL" />
       <updated>1716289942399</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="#12: fix import module">
+      <option name="closed" value="true" />
+      <created>1716290424964</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716290424964</updated>
+    </task>
+    <task id="LOCAL-00013" summary="#13: fix import module">
+      <option name="closed" value="true" />
+      <created>1716290627490</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716290627490</updated>
+    </task>
+    <task id="LOCAL-00014" summary="#14: delete scss">
+      <option name="closed" value="true" />
+      <created>1716290720048</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716290720048</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +203,9 @@
     <MESSAGE value="#9: fix node version" />
     <MESSAGE value="#10: fix deploy.yml" />
     <MESSAGE value="#11: fix pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="#11: fix pages" />
+    <MESSAGE value="#12: fix import module" />
+    <MESSAGE value="#13: fix import module" />
+    <MESSAGE value="#14: delete scss" />
+    <option name="LAST_COMMIT_MESSAGE" value="#14: delete scss" />
   </component>
 </project>
