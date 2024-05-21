@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c04eff-1afb-41d7-a1cd-394199307d4a" name="Changes" comment="#7: update deploy">
-      <change afterPath="$PROJECT_DIR$/src/pages/about/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
+    <list default="true" id="64c04eff-1afb-41d7-a1cd-394199307d4a" name="Changes" comment="#10: fix deploy.yml">
+      <change afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nginx" beforeDir="false" afterPath="$PROJECT_DIR$/.nginx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715775239699</updated>
       <workItem from="1715775240898" duration="9639000" />
-      <workItem from="1716275388291" duration="1095000" />
+      <workItem from="1716275388291" duration="4074000" />
     </task>
     <task id="LOCAL-00001" summary="#1: initial">
       <option name="closed" value="true" />
@@ -118,7 +117,31 @@
       <option name="project" value="LOCAL" />
       <updated>1715787318208</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="#8: add pages">
+      <option name="closed" value="true" />
+      <created>1716286808262</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716286808262</updated>
+    </task>
+    <task id="LOCAL-00009" summary="#9: fix node version">
+      <option name="closed" value="true" />
+      <created>1716287192730</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716287192730</updated>
+    </task>
+    <task id="LOCAL-00010" summary="#10: fix deploy.yml">
+      <option name="closed" value="true" />
+      <created>1716287355027</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716287355027</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +166,9 @@
     <MESSAGE value="#5: add next js" />
     <MESSAGE value="#6: update deploy" />
     <MESSAGE value="#7: update deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="#7: update deploy" />
+    <MESSAGE value="#8: add pages" />
+    <MESSAGE value="#9: fix node version" />
+    <MESSAGE value="#10: fix deploy.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="#10: fix deploy.yml" />
   </component>
 </project>

@@ -24,7 +24,7 @@ server {
   }
 
   location / {
-    proxy_pass http://localhost:3000;
+    proxy_pass http://localhost:4000;
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection 'upgrade';
@@ -69,15 +69,28 @@ server {
     server_name 77.223.100.33;
 
     root /var/www/nextjs/.next/server/pages;
+    index home.html;
 
     location / {
-        root /var/www/nextjs/.next;
-        index index.html index.htm;
         try_files $uri $uri/ /index.html;
     }
 
     location /server/pages/ {
         alias /var/www/nextjs/.next/server/pages/;
         autoindex on;
+    }
+}
+
+
+server {
+    listen 80;
+    server_name http://77.223.100.33;
+
+    location / {
+        proxy_pass http://localhost:4000; # Предполагая, что ваше Next.js приложение запущено на порту 3000
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
