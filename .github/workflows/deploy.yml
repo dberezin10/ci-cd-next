@@ -20,6 +20,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            nvm install node
             cd /root/ci-cd-next
             git pull
             export NVM_DIR=~/.nvm
