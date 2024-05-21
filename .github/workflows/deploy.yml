@@ -20,13 +20,14 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            fuser -n tcp -k 4000
             cd /root/ci-cd-next
             git pull
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
             npm install
             npm run build
-#            npm run dev
+            npm run dev
             rm -r ../../var/www/nextjs/.next/
             mv .next/ ../../var/www/nextjs
             sudo service nginx restart
