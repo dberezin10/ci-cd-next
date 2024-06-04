@@ -36,6 +36,4 @@ jobs:
             npm install
             npm run build
             pm2 restart next_app
-            rm -r ../../var/www/nextjs/.next/
-            mv .next/ ../../var/www/nextjs 
             service nginx restart
