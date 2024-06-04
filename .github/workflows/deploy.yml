@@ -36,7 +36,7 @@ jobs:
             source ~/.nvm/nvm.sh
             npm install
             npm run build
-            npm run dev
+            npm run start
             rm -r ../../var/www/nextjs/.next/
             mv .next/ ../../var/www/nextjs
-            sudo service nginx restart
+            service nginx restart
